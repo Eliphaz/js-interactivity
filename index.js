@@ -28,7 +28,11 @@ const deleteMovie =(event)=>{
 
 const crossOffMovie =(event)=>{
     event.target.classList.toggle('checked')
-    
+    if(event.target.classList.contains('checked')){
+        message.textContent = "Movie Watched!"
+    }else{
+        message.textContent = "Movie added Back!"
+    }
 }
 
 form.addEventListener('submit',addMovie)
